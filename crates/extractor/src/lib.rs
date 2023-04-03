@@ -2,7 +2,7 @@ use std::{borrow::Cow, io::{self, BufReader}, path::Path, fs};
 
 use quick_xml::{de::from_reader, DeError};
 
-use crate::domain::acco::TextAcco;
+use domain::acco::TextAcco;
 
 #[derive(Debug)]
 pub enum FileData {

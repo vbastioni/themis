@@ -1,11 +1,8 @@
 use std::io;
 
 use sqlx::postgres::PgPoolOptions;
-// use meilisearch_sdk::Client;
 
-use themis_lib::{configuration::Setting, startup::run};
-// use crate::configuration::Setting;
-// use startup::run;
+use themis::{configuration::Setting, startup::run};
 
 #[actix_web::main]
 async fn main() -> Result<(), io::Error> {

@@ -1,4 +1,4 @@
-use themis_lib::zip::extract;
+use extractor::extract;
 
 fn main() {
     let args = std::env::args();

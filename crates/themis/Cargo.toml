@@ -1,0 +1,38 @@
+[package]
+name = "themis"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4.3.1"
+config = "0.13.3"
+custom_error = "1.9.2"
+diesel = "2.0.3"
+futures = "0.3.28"
+meilisearch-sdk = "0.22.1"
+secrecy = { version = "0.8.0", features = ["serde"] }
+serde = { version = "1.0.159", features = ["derive"] }
+serde-aux = "4.1.2"
+
+[dependencies.askama]
+version = "0.12.0"
+features = [
+    "serde",
+    "serde_json",
+    "with-actix-web",
+    "mime",
+    "mime_guess"
+]
+
+[dependencies.sqlx]
+version = "0.6.3"
+default-features = false
+features = [
+    "runtime-actix-rustls",
+    "macros",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate",
+    "offline"
+]
