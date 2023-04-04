@@ -4,4 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+chrono = { version = "0.4.24", default-features = false, features = ["std"] }
 serde = { version = "1.0.159", features = ["derive"] }
