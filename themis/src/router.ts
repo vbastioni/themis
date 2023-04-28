@@ -4,11 +4,10 @@
 import { components, hooks, utils } from '@generouted/react-router/client'
 
 export type Path =
-  | `/acco`
-  | `/admin/settings/:indice`
+  | ``
 
 export type Params = {
-  '/admin/settings/:indice': { indice: string }
+  
 }
 
 export type ModalPath = never
