@@ -64,3 +64,21 @@ pub struct Meta {
 pub struct TextAcco {
     pub meta: Meta,
 }
+
+impl TextAcco {
+    fn get_id(&self) -> String {
+        self.meta.meta_spec.meta_acco.numero.clone()
+    }
+}
+
+impl super::traits::Id for TextAcco {
+    fn id(&self) -> String {
+        self.get_id()
+    }
+}
+
+impl super::traits::Id for &TextAcco {
+    fn id(&self) -> String {
+        self.get_id()
+    }
+}

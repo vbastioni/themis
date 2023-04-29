@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 
-use super::text_acco::{TextAcco, self};
+use super::{text_acco::{self, TextAcco}, traits::Id};
 
 #[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct Acco {
@@ -36,6 +36,12 @@ pub struct Acco {
     pub conforme_version_integrale: String,
     pub secteur: String,
     pub themes: Option<Vec<Theme>>,
+}
+
+impl Id for Acco {
+    fn id(&self) -> String {
+        self.numero.clone()
+    }
 }
 
 impl From<&TextAcco> for Acco {

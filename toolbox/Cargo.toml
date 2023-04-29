@@ -13,15 +13,16 @@ name = "toolbox"
 path = "src/main.rs"
 
 [dependencies]
+chrono = {version = "0.4.24", default-features = false, features = ["std"]}
 clap = {version = "4.2.1", features = ["derive"]}
 config = "0.13.3"
-elasticsearch = "8.5.0-alpha.1"
+elasticsearch = {version = "8.5.0-alpha.1", features = ["rustls-tls"]}
+flate2 = {version = "1.0.25", default-features = false, features = ["miniz_oxide", "rust_backend"]}
+futures = "0.3.28"
+meilisearch-sdk = "0.22.1"
+quick-xml = {version = "0.28.1", features = ["serialize"]}
 secrecy = {version = "0.8.0", features = ["serde"]}
 serde = {version = "1.0.159", features = ["derive"]}
 serde-aux = "4.1.2"
-flate2 = {version = "1.0.25", default-features = false, features = ["miniz_oxide", "rust_backend"]}
 tar = {version = "0.4.38", default-features = false}
-quick-xml = {version = "0.28.1", features = ["serialize"]}
-futures = "0.3.28"
-meilisearch-sdk = "0.22.1"
-chrono = { version = "0.4.24", default-features = false, features = ["std"] }
+tokio = {version = "*", features = ["full"]}
